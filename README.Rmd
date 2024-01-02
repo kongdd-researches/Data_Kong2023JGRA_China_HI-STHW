@@ -13,7 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Data of Kong2023JGRA China HI-STHW  
+# Data of "Contribution of Anthropogenic Activities to the Intensification of Heat Index-based Spatiotemporally Contiguous Heatwave Events in China"
+> Kong et al., 2023, JGR-A
 
 <!-- [![R-CMD-check](https://github.com/eco-hydro/phenofit/workflows/R-CMD-check/badge.svg)](https://github.com/eco-hydro/phenofit/actions)
 [![codecov](https://codecov.io/gh/eco-hydro/phenofit/branch/master/graph/badge.svg)](https://app.codecov.io/gh/eco-hydro/phenofit) -->
@@ -33,7 +34,7 @@ library(Ipaper)
 ```
 
 
-## Figure 2
+## Figure 3
 
 ```{r}
 load("./dat_Figure2_annual_variation_STHW.rda")
@@ -51,7 +52,7 @@ print2(data_obs, data_sim, ts)
 - `prob`    : the threshold of HW definition, use 0.95 by default
 - `value`   : values of HI-STHW characteristics
 
-## Figure 3
+## Figure 4
 
 ```{r}
 load("./dat_Figure3_spatial_trend_STHW.rda")
@@ -63,7 +64,7 @@ str(df)
 
 - `mask`: (1) `TRUE`: trend is significant; (2) `FALSE`: trend is nonsignificant
 
-## Figure 4
+## Figure 5
 
 ```{r}
 load("dat_Figure4_multiple_scenarios.rda")
@@ -72,10 +73,10 @@ print2(di_sim, ts)
 
 - `ts`: trends of different scenarios
 
-## Figure 5
+## Figure 6
 
 ```{r}
-load("dat_Figure5_fingerprint_V3.rda")
+load("dat_Figure5_fingerprint_V5.rda")
 
 print2(d_x, t_x, t_obs, d_noise_a, d_noise_b)
 ```
@@ -84,7 +85,7 @@ print2(d_x, t_x, t_obs, d_noise_a, d_noise_b)
 - `d_x`: the value of different signal
 - `d_noise_a`,`d_noise_b`: noise1 and noise2
 
-## Figure 6
+## Figures 7 and 8
 
 > Figures 6 and 7 share the same data.
 
@@ -96,7 +97,7 @@ head(df_all)
 - `value_sm`: smoothed by a 21-year moving window
 - `HI_wl`: warming level
 
-## Figure 8
+## Figure 9
 
 ```{r}
 df = fread("dat_Figure8_HW_char_in_Spatial.csv")
